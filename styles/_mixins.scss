@@ -1,0 +1,28 @@
+@mixin mobile {
+    @media (max-width:600px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:600px)and (max-width:900px) {
+        @content;
+    }
+}
+
+@mixin mob-tablet {
+    @media (max-width:900px) {
+        @content;
+    }
+}
+@mixin grid($n:2){
+    grid-template-columns: repeat($n,1fr);
+}
+@mixin flex($di:column){
+    display: flex;
+    flex-direction: $di;
+}
+
+@mixin display($type:flex){
+    display: $type;
+}
